@@ -11,5 +11,6 @@ wheels/
 
 #jupyter stuff
 nohup.out
-deepseek-agent.md
+references/
 .env
+.ipynb_checkpoints/
