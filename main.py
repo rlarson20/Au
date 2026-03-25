@@ -1,3 +1,13 @@
+#!/usr/bin/env python3
+# /// script
+# requires-python = ">=3.13"
+# dependencies = [
+#     "dotenv>=0.9.9",
+#     "jsonschema>=4.24.0",
+#     "openai>=1.93.1",
+#     "pydantic>=2.11.7",
+# ]
+# ///
 from pydantic import BaseModel, Field, ConfigDict
 from typing import Callable
 from openai import OpenAI
@@ -230,7 +240,7 @@ def main():
         base_url="https://openrouter.ai/api/v1",
         api_key=getenv("OPENROUTER_API_KEY"),
     )
-    test_model = "anthropic/claude-sonnet-4"
+    test_model = "minimax/minimax-m2.5:free"
     cat = ToolDefinition(function=read_file)
     ls = ToolDefinition(function=list_files)
     ed = ToolDefinition(function=edit_file)
